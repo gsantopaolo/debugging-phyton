@@ -1,5 +1,3 @@
-version: '3.8'
-
 # This is a specialized compose file for PyCharm remote debugging
 # It keeps the container running and waits for the PyCharm debugger to attach
 
