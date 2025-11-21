@@ -4,7 +4,7 @@
 > Check my [blog post on genmind.ch](https://genmind.ch/posts/Deep-Dive-Debugging-Python-with-PyCharm-on-macOS/) to get detail instructions on how to use this repo.
 
 
-A FastAPI-based DateTime API with advanced timezone conversion and business hours functionality. This project serves as a comprehensive example for debugging Python applications with PyCharm on macOS, both locally and in Docker containers.
+A FastAPI-based DateTime API with advanced timezone conversion and business hours' functionality. This project serves as a comprehensive example for [debugging Python applications with PyCharm on macOS](https://genmind.ch/posts/Deep-Dive-Debugging-Python-with-PyCharm-on-macOS/), both locally and in Docker containers.
 
 ## Features
 
@@ -54,47 +54,8 @@ This project includes a comprehensive guide for debugging Python applications wi
   - Remote debugging with Python Debug Server
   - Troubleshooting and best practices
 
-## Project Structure
 
-```
-codechallenge/
-├── src/
-│   ├── main.py                 # FastAPI application
-│   ├── requirements.txt        # Python dependencies
-│   └── Dockerfile              # Docker image definition
-├── deployment/
-│   └── build.sh                # Build script
-├── docs/
-│   └── post.md                 # Comprehensive debugging blog post
-├── docker-compose.yml          # Standard Docker Compose config
-├── docker-compose.debug.yml    # Debug-specific compose config
-├── environment.yml             # Conda environment definition
-├── DEBUGGING_GUIDE.md          # Quick debugging setup guide
-└── README.md                   # This file
-```
-
-## Development
-
-### Prerequisites
-
-- Python 3.11+
-- Conda/Miniconda
-- Docker Desktop (for containerized development)
-- PyCharm Professional (recommended for full debugging features)
-
-### Local Development
-
-```bash
-# Create environment
-conda env create -f environment.yml
-conda activate datetime-api
-
-# Run locally
-cd src
-uvicorn main:app --reload --log-level debug
-```
-
-### Testing the API
+## Testing the API
 
 ```bash
 # Get current time in EST
@@ -106,11 +67,3 @@ curl "http://localhost:8000/datetime/convert?time_str=2024-11-21T15:00:00Z&timez
 # Check business hours
 curl "http://localhost:8000/business-hours?tz=EST&start_hour=9&end_hour=17"
 ```
-
-## License
-
-See LICENSE file for details.
-
-## Learn More
-
-For a deep dive into debugging Python applications with PyCharm (local and Docker), read the comprehensive guide in `docs/post.md`.

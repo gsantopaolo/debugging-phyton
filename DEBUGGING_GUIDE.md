@@ -1,6 +1,6 @@
 # Quick Start: Debugging Setup 🚀
 
-This is a companion guide to the comprehensive blog post in `docs/post.md`.
+This is a companion guide to the comprehensive blog post you can find on my blog at [genmind.ch](https://genmind.ch/posts/Deep-Dive-Debugging-Python-with-PyCharm-on-macOS/)
 
 ## Quick Setup
 
