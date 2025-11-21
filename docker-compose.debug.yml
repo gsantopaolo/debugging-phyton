@@ -4,11 +4,11 @@ version: '3.8'
 # It keeps the container running and waits for the PyCharm debugger to attach
 
 services:
-  datetime-api-debug:
+  debugging-phyton:
     build:
       context: ./src
       dockerfile: Dockerfile
-    container_name: datetime-api-debug
+    container_name: debugging-phyton
     ports:
       - "8000:8000"
       - "5678:5678"  # PyCharm debug server port

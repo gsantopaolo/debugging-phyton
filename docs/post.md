@@ -60,7 +60,7 @@ Let's start with local debugging using conda. If this isn't solid, Docker debugg
 Our example project includes an `environment.yml` file:
 
 ```yaml
-name: datetime-api
+name: debugging-phyton
 channels:
   - conda-forge
   - defaults
@@ -78,25 +78,25 @@ Create the environment from your terminal:
 
 ```bash
 # Navigate to project root
-cd /path/to/codechallenge
+cd /path/to/DebuggingPython 
 
 # Create the conda environment
 conda env create -f environment.yml
 
 # Activate it
-conda activate datetime-api
+conda activate debugging-phyton
 ```
 
 ### 2.2 Configuring PyCharm to Use Conda
 
 1. Open your project in PyCharm
 2. Open **Settings** (`⌘,` on macOS)
-3. Navigate to **Project: codechallenge → Python Interpreter**
+3. Navigate to **Project: debugging-phyton → Python Interpreter**
 4. Click the gear icon ⚙️ → **Add Interpreter** → **Add Local Interpreter**
 5. Select **Conda Environment** tab
 6. Choose **Existing environment**
 7. Navigate to your conda environments folder:
-   - Default location: `~/miniconda3/envs/datetime-api/bin/python` or `~/anaconda3/envs/datetime-api/bin/python`
+   - Default location: `~/miniconda3/envs/debugging-phyton/bin/python` or `~/anaconda3/envs/debugging-phyton/bin/python`
 8. Click **OK**
 
 PyCharm will now use this interpreter for:
@@ -113,15 +113,15 @@ Never use "Run file in console" for serious debugging. Always create named confi
 2. Click **+** → **Python**
 3. Configure as follows:
 
-**Configuration Name**: `datetime-api-local`
+**Configuration Name**: `debugging-phyton-local`
 
 | Field | Value |
 |-------|-------|
 | **Script path** | Leave empty (we'll use module) |
 | **Module name** | `uvicorn` |
 | **Parameters** | `main:app --reload --log-level debug` |
-| **Working directory** | `/path/to/codechallenge/src` |
-| **Python interpreter** | `datetime-api` (your conda env) |
+| **Working directory** | `/path/to/debugging-phyton/src` |
+| **Python interpreter** | `debugging-phyton` (your conda env) |
 | **Environment variables** | (empty for now, add as needed) |
 
 4. Click **OK**
@@ -327,7 +327,7 @@ This is the most "PyCharm-native" approach. PyCharm manages the container lifecy
 
 From terminal:
 ```bash
-cd /path/to/codechallenge
+cd /path/to/debugging-phyton
 docker build -t datetime-api:latest -f src/Dockerfile src/
 ```
 

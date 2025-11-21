@@ -1,4 +1,4 @@
-name: datetime-api
+name: debugging-phyton
 channels:
   - conda-forge
   - defaults
