@@ -46,8 +46,8 @@ API Documentation: http://localhost:8000/docs
 
 This project includes a comprehensive guide for debugging Python applications with PyCharm:
 
-- **Quick Start**: See `DEBUGGING_GUIDE.md` for setup instructions
-- **Full Blog Post**: See `docs/post.md` for the complete debugging guide covering:
+- **Quick Start**: See [`DEBUGGING_GUIDE.md`](DEBUGGING_GUIDE.md) for setup instructions
+- **Full Blog Post**: See [Deep-Dive: Debugging Python with PyCharm on macOS (Local & Docker) on GenMind.ch](https://genmind.ch/posts/Deep-Dive-Debugging-Python-with-PyCharm-on-macOS/) for the complete debugging guide covering:
   - Local debugging with conda
   - Docker interpreter debugging
   - Docker Compose debugging
